@@ -1,7 +1,38 @@
+%***************************************************************************************************
+%*   Solve 2D poisson equation by presented code.
+%*   I take no responsibilities for any errors in the code or damage thereby.
+%*   Please notify me at zolfaghari1992iut@gmail.com if the code is used in any type of application.
+%***************************************************************************************************
+%*   Developer   : Ali Zolfaghari Sichani (14-08-2018)
+%***************************************************************************************************
+%*   References  : 
+%*   Computational Fluid Mechanics and Heat Transfer.
+%*   by John C. Tannehill (Author), Dale Anderson (Author), Richard H. Pletcher (Author).
+%***************************************************************************************************
+%*   Poisson Equation in two-dimensional square domain. (solving by centeral difference scheme)   :   
+%*   Uxx + Uyy = f(x,y)
+%*   1 : SUCCESSIVE OVER RELAXATION
+%*   2 : MULTIGRID + GAUSS SEIDEL
+%*   3 : CONJUGATE GRADIENT
+%*   4 : PRECONDITIONED CONJUGATE GRADIENT
+%*   Inputs      :
+%*   M           (number of division of domain in x-direction      )
+%*   N           (number of division of domain in y-direction      )
+%*   Lx          (length of domain in x-direction                  )
+%*   Ly          (length of domain in y-direction                  )
+%*   Wsor_MG     (relaxation factor in MULTIGRID + GAUSS SEIDEL    )
+%*   Wsor_SOR    (relaxation factor in SUCCESSIVE OVER RELAXATION  )
+%*   MaxI_MG     (max. allowable itrerations of gauss              )
+%*   MaxE_MG     (max. allowable error of gauss                    )
+%*   MAXERROR    (max. allowable error                             )
+%*   Outputs     :
+%*   plot numerical solutions
+%***************************************************************************************************
+
+
 clear,clc,close all
 format compact
 format long
-
 
 
 % input
